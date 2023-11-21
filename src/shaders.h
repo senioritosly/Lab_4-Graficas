@@ -91,19 +91,27 @@ Color getWorldNoise(float x, float y, float z) {
     if (firstLayer < 0.2) {
         zoom = 800.0f;
         float continentNoise = surfaceNoise.GetNoise(x * zoom, y * zoom, z * zoom);
+
+        // Adjust the colors for land and surface
         tempColor = colors.landColor + (colors.surfaceColor * continentNoise);
         fragmentColor = {tempColor.x, tempColor.y, tempColor.z};
+
+        // Add some variation to shore color
         if (firstLayer > 0.18) {
             tempColor = colors.shoreColor + colors.surfaceColor * continentNoise;
             fragmentColor = {tempColor.x, tempColor.y, tempColor.z};
         }
     } else {
         float oceanNoise = surfaceNoise.GetNoise(x * zoom, y * zoom, z * zoom);
+
+        // Adjust the colors for ocean and sea
         tempColor = colors.oceanColor + colors.seaColor * oceanNoise;
         fragmentColor = {tempColor.x, tempColor.y, tempColor.z};
     }
 
     zoom = 100.0f;
+
+    // Add more dynamics to cloud color
     float cloudNoise = atmosphereNoise.GetNoise((x + frame * 0.007f) * zoom, y * zoom, z * zoom);
     if (cloudNoise > 0.2) {
         tempColor = tempColor + colors.skyColor * cloudNoise;
@@ -112,6 +120,7 @@ Color getWorldNoise(float x, float y, float z) {
 
     return fragmentColor;
 }
+
 
 //MOON
 FastNoiseLite moonNoise;
