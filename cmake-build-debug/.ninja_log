@@ -1,0 +1,9 @@
+# ninja log v5
+3	40	0	C:/Users/mario/OneDrive/Escritorio/Uni/SEXTOSEMESTRE/Graficos/UVG_Graficas_Lab_4-main/cmake-build-debug/CMakeFiles/cmake.verify_globs	cfe4da50acddacbc
+12	5293	7222262961243016	CMakeFiles/SR1.dir/src/framebuffer.cpp.obj	b01977be595361d0
+8	4541	7222296517012508	CMakeFiles/SR1.dir/src/main.cpp.obj	6de458c71e0bb513
+4542	4880	7222296520375259	SR1.exe	d3cb42b94ecb6996
+10	87	0	C:/Users/mario/OneDrive/Escritorio/Uni/SEXTOSEMESTRE/Graficos/Lab_4/Lab_4-Graficas/cmake-build-debug/CMakeFiles/cmake.verify_globs	c2ebd19d224dfe90
+21	11803	7222297728689043	CMakeFiles/SR1.dir/src/framebuffer.cpp.obj	b7d5f425bf67fc4e
+35	14077	7222297751371365	CMakeFiles/SR1.dir/src/main.cpp.obj	d6d34d5e2dcae6bb
+14078	14544	7222297756091043	SR1.exe	d3cb42b94ecb6996
